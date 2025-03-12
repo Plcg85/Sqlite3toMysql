@@ -1,0 +1,1 @@
+Codigo hecho en php para pasar la base de datos de la aplicacion Mis Cuentas de sqlite a MySQL. Sólamente creada con propósito de aprender un poco de php para prepararme de cara a las prácticas de empresa.
