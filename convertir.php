@@ -1,4 +1,5 @@
 <?php
+//drop tables gastospuntuales,gastosfijos,ingresospuntuales,ingresosfijos;
 
 require "bdMysql.php";
 require "bdSqlite.php";

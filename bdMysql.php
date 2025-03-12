@@ -11,6 +11,7 @@ class bdMysql
     //constructor
     function __construct()
     {
+        $this->crearBaseDeDatos(); //la crea si no existe
         $this->_CONNECTION = new mysqli($this->_SERVER, $this->_USER, $this->_PASS, $this->_NOMBREBD);
 
         if ($this->_CONNECTION->connect_error) {
@@ -18,6 +19,19 @@ class bdMysql
         }
     }
 
+    function crearBaseDeDAtos()
+    {
+        //crear la conexion
+        $conn = new mysqli($this->_SERVER,$this->_USER,$this->_PASS);
+        if ($conn->connect_error){
+            die("Conexion fallida");
+        }
+        $sql="CREATE DATABASE IF NOT EXISTS MisCuentas";
+        if (!$conn->query($sql)===TRUE){
+            echo"Error al crear la base de datos";
+        }
+        $conn->close();
+    }
     //destructor
     //hay que tener en cuenta que es llamado cuando el objeto deja de estar en primer plano o es destruido por el programador a mano unset($dbMysql)
     function __destruct()
