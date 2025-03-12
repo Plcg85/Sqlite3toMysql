@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copia seguridad</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  
+    <form action="convertir.php" method="post" enctype="multipart/form-data">
+        
+        <label for="correo">Correo</label>
+        <input type="email" name="correo" id="correo" required/>
+        
+        <label for="contrasena">Contraseña</label>
+        <input type="password" name = "contrasena" id="contrasena" required/>
+        
+        <label for="archivo">Selecciona tu archivo a subir</label>
+        <input type="file" name = "archivo" id = "archivo" required/>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+    <p id="resultado"></p>
+    <script src="/javascript/comprobarFormulario.js"></script>
+</body>
+</html>
